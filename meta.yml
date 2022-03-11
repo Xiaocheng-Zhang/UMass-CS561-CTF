@@ -1,0 +1,40 @@
+name: Guess Password
+author: [Xiaocheng Zhang](https://github.com/Xiaocheng-Zhang/UMass-CS561-CTF)
+
+description: |
+  So you know about simple TCP servers and how you can use utilities such as netcat to connect to them. This challenge deals with a simple netcat server to which you connect to.
+
+  **Connection Instructions**:
+  
+  You can read the `Free Points` challenge to gain some context on how the services are laid out on swarm, and how there is a front-facing SSH server with which you can connect to challenges.
+  
+  Do the following:
+
+  $ `ssh -L localhost:<local port>:172.20.26.2:12345 -p 56151 <username>@cs561.cs.umass.edu`
+
+  For example, run
+
+  $ `ssh -L localhost:8080:172.20.26.2:12345 -p 56151 user@cs561.cs.umass.edu`
+
+  This will forward the local port 8080 on your machine to `172.20.26.2:12345` on the swarm network, where this challenge is hosted.
+  
+  You can try connecting using netcat to see that the connection is established.
+
+  $ `nc localhost 8080`
+
+value: 100
+category: Miscellaneous
+flag: CTF_SDaT{au70MaT1oN_FtW!}
+
+hints:
+  - {
+    content: "Try to solve this programmatically, using something like python sockets, be careful of ending of input line",
+    cost: 20
+  }
+  - {
+    content: "If you made a program to decrypt password but facing timeout, you might need to consider about feedback of wrong input",
+    cost: 10
+  }
+
+# administrative
+container_name: can-you-keep-up

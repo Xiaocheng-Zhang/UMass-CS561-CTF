@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  guess-passwd:
+    container_name: guess-passwd
+    build:
+      context: ../../../ # do not change
+      dockerfile: challenges/misc/guess-passwd/Dockerfile # challenges/<category>/<folder_name>/Dockerfile
+    networks:
+      nw0:
+        ipv4_address: 172.20.26.2 # change this as mentioned in the instructions
+    command: bash start_nc.sh
+
+# leave this part as it is
+networks:
+  nw0:
+    external: true
