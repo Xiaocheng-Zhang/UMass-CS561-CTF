@@ -8,7 +8,7 @@ from interruptingcow import timeout
 def run():
     passwd = "".join(random.choices(string.ascii_letters + string.digits, k=4))
     while True:
-        with timeout(2):
+        with timeout(3):
             try:
                 print(f"enter 4-digit password:")
                 # print(passwd)
