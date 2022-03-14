@@ -1,6 +1,6 @@
 # Writeup for Misc/guess password?
 
-Authors: [Anand Gopakumar](https://github.com/anandg95)
+Authors: [Xiaocheng Zhang](https://github.com/Xiaocheng-Zhang/UMass-CS561-CTF)
 
 ## Description
 
